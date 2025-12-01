@@ -10,27 +10,19 @@ import { CiSquarePlus } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import { FaBars } from "react-icons/fa";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
-import LOGO from "../../public/codnify-1.png"
-
+// import LOGO from "../../public/codnify-1.png"
 const Navbar = () => {
-  const logo = {
-    with: "100%",
-    height: "auto",
-    maxWidth: "6em",
-    padding: "1em"
-  }
   return (
     <>
-      <header>
-        <div className="navigation-container">
-          <div className="static-navigation">
-            <div className="logo-slider-toggle">
+      <header className="bg-amber-950 p-4 m-4 rounded-4xl">
+          <div className=" flex justify-between">
+            <div className="flex gap-4">
               <div>
                 <FaBars />
               </div>
-              <div>
+              <div className="flex gap-4">
                 <Link to="">
                   <div title="Overview">
                     <FiSidebar />
@@ -63,7 +55,7 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
-            <div className="nav-social-media-container">
+            <div className="flex gap-4">
               <Link to="/">
                 <div>
                   <CiSquarePlus />
@@ -83,41 +75,6 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className="navigation-slider">
-            <div className="slider-header">
-              <div>
-                <img
-                  src={LOGO}
-                  alt=""
-                  style={logo}
-                />
-             </div>
-              <p>Jeff Mutethia</p>
-            </div>
-            <nav>
-              <ul>
-                <li>
-                  <a href="">Overview</a>
-                </li>
-                <li>
-                  <a href="">Projects</a>
-                </li>
-                <li>
-                  <a href="">Work</a>
-                </li>
-                <li>
-                  <a href="">Certification</a>
-                </li>
-                <li>
-                  <a href="">Skills</a>
-                </li>
-                <li>
-                  <a href="">Blog</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
       </header>
     </>
   );
